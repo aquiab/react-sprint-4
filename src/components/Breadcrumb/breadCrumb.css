@@ -1,0 +1,17 @@
+.breadCrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 5px;
+}
+
+.breadCrumb .breadCrumbLink {
+  color: #000;
+  text-decoration: none;
+}
+
+.breadCrumbLink h3 {
+  margin: 0;
+  line-height: 24px;
+}
