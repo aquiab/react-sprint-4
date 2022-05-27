@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
-import { sidebarContext } from "../context/sidebarContext";
+import { sidebarContext } from "../../context/sidebarContext";
 import "./mainArea.css";
 
 const MainArea = ({ children }) => {
