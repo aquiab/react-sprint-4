@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
 import { sidebarContext } from "../context/sidebarContext";
-import Header from "../Header/Header";
-import SearchBar from "../SearchBar/SearchBar";
 import "./mainArea.css";
 
 const MainArea = ({ children }) => {
