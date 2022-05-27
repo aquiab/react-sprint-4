@@ -4,8 +4,7 @@ import svgChevron from '../../assets/chevron-right.svg'
 
 const ProductsCard = () => {
 
-
-  return (
+      return (
     <>
     <ul className='barra-products'>
         <div className='product'>
@@ -19,7 +18,7 @@ const ProductsCard = () => {
                     </div>  
                 </li>
         </div>
-        <li className='flecha-container'><img className='flecha' src={svgChevron} alt="imgProduct" />  </li>
+        <li className='flecha-container'><img className='flecha' src={svgChevron} alt="imgProduct"/></li>
     </ul>
     </>
   )
