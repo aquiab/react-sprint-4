@@ -1,21 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
+import { sidebarContext } from "../context/sidebarContext";
+import Header from "../Header/Header";
+import SearchBar from "../SearchBar/SearchBar";
 import "./mainArea.css";
-import svgBars from "../../assets/menu.svg";
 
 const MainArea = ({ children }) => {
-	const [sidebarOpened, setSidebarOpened] = useState(false);
+	const { isOpen, closeSidebar } = useContext(sidebarContext);
 	const sidebarStyle = {
-		left: sidebarOpened ? "0" : "-100%",
+		left: isOpen ? "0" : "-100%",
 	};
-
-	const handleSidebarOpen = () => {
-		setSidebarOpened((x) => !x);
-	};
-
-  const closeSidebar = () => {
-    setSidebarOpened(false);
-  };
 
   const sidebarRef = useClickOutside(closeSidebar)
 
@@ -23,10 +17,9 @@ const MainArea = ({ children }) => {
 	return (
 		<div className="mainArea-container">
 			<aside className="sidebar" style={sidebarStyle} ref={sidebarRef}>
-				MainArea
+				Sidebar
 			</aside>
 			<main className="mainArea">
-				<button className="menuButton" onClick={handleSidebarOpen}><img src={svgBars}/></button>
 				{children}
 			</main>
 		</div>

@@ -11,8 +11,14 @@
   transition: left .7s ease-in-out;
 }
 
-.menuButton {
-  border: none;
-  padding: 5px;
-  background-color: transparent;
+.mainArea {
+  width: 100%;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    position: inherit;
+    left: 0;
+  }
 }
