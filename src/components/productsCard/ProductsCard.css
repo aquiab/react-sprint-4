@@ -1,0 +1,35 @@
+*{
+    list-style: none;
+}
+
+.barra-products{
+    display: flex;  
+    justify-content: space-between;
+    border-radius:15px;
+    background-color: grey;
+    height: 70px;
+}
+.product{
+    display: flex;
+    align-items: center;
+}
+
+
+.flecha-container{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.flecha{
+    margin-top: 34px;
+}
+
+.product-info{
+    padding-bottom: 6px;
+}
+.idProduct{
+    margin-top: -22px;
+}
+

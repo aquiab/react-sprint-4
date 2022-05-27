@@ -1,0 +1,50 @@
+*{
+    list-style: none;
+
+}
+
+.imagen{
+    color: white;
+}
+
+.barra-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius:15px;
+    background-color: grey;
+    height: 40px;
+    color: white;
+    width : calc(100vw - 296px);
+    position:relative;
+    right: -253px;
+}
+
+.barra-main .barra-buttons{
+    display: flex;
+    gap: 10px;
+    padding-right: 15px ;
+}
+
+.barra-main .barra-porducts{
+    display:flex;
+    gap: 10px;
+    margin-left: -28px;
+}
+
+.barra-button{
+    font-size: 10px;
+    color: white;
+    border-radius: 50px;
+    background-color: rgb(167, 167, 167);
+    border-style: none;
+    height: 20px;
+    cursor: pointer;
+}
+
+@media (min-width:1024px) {
+    .barra-main{
+        width: 96vw;
+        right: -4px;
+    }
+}
