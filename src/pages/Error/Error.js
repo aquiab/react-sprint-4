@@ -2,7 +2,7 @@ import "./Error.css"
 
 export default function Error() {
     return(
-        <div class="error-msg">
+        <div className="error-msg">
             Página no encontrada
         </div>
     )

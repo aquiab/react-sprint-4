@@ -9,8 +9,8 @@ export default function AppRouter() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<ProductsList />} />
-            <Route path="/products/new" element={<ProductView newProduct={true} />} />
-            <Route path="/products/:id" element={<ProductView newProduct={false}/>} />
+            <Route path="/products/new" element={<ProductView />} />
+            <Route path="/products/:id" element={<ProductView />} />
             <Route path="*" element= {<Error />} />
         </Routes>
     )
