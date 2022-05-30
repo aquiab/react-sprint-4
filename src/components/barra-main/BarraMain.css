@@ -3,7 +3,7 @@
 }
 
 .imagen{
-    color: white;
+    filter:invert(100%)
 }
 
 .barra-main{

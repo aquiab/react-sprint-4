@@ -15,15 +15,16 @@
     position: relative;
     right: 5px;
     margin-bottom: 10px;
-    transition:all .2s ease;
+    transition:all .1s ease;
+    color: white;
 }
 
 .barra-products:hover{
-    -webkit-transform:scale(1.03);
-    -moz-transform:scale(1.03);
-    -ms-transform:scale(1.03);
-    -o-transform:scale(1.03);
-    transform:scale(1.03);
+    -webkit-transform:scale(1.01);
+    -moz-transform:scale(1.01);
+    -ms-transform:scale(1.01);
+    -o-transform:scale(1.01);
+    transform:scale(1.01);
 }
 
 
