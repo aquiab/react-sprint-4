@@ -14,7 +14,7 @@ const Breadcrumb = ({ steps }) => {
 							<h3 key={`crumb-${index}`}>{step.title}</h3>
 						</Link>
 						{index !== steps.length - 1 && (
-							<img key={`chevron-${index}`} src={chevronRight} />
+							<img key={`chevron-${index}`} alt="" src={chevronRight} />
 						)}
 					</React.Fragment>
 				);

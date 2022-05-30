@@ -4,11 +4,13 @@ import { useContext, useEffect , useState } from "react";
 import useGetProducts from "../../../hooks/useGetProducts";
 import { productsContext } from "../../../context/ProductsContext";
 import axios from 'axios'
+import Header from "../../../components/Header/Header";
 
 export default function ProductsList() {
 
-    const { setProducts }= useContext(productsContext)
+    const crumbs = [{ title: `Productos`, path: "/products" }];
 
+    const { setProducts }= useContext(productsContext)
 
     const [busqueda , setBusqueda] = useState('');
 
@@ -24,9 +26,9 @@ export default function ProductsList() {
     const filtrar = (terminoBusqueda) => {
         var filt= filtrados.filter((elemento=>{
             if(elemento.nombre.toLowerCase().includes(terminoBusqueda.toLowerCase())){
-                
-                return elemento;
+                return true;
             }
+            return false
         }))
         setProducts(filt)
     }
@@ -38,10 +40,10 @@ export default function ProductsList() {
             .then(res=>setFiltrados(res.data))
             .catch(err=>console.log(err))
     },[])
-     
+    
     return(
         <>
-        
+        <Header breadcrumbs={crumbs}/>
         <form>
             <label htmlFor='busqueda'>Buscar</label> 
             <input 

@@ -39,5 +39,5 @@
 }
 
 .navlink.active img{
-  filter: invert(1000%);
+  filter: invert(100%);
 }
