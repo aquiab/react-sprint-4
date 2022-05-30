@@ -1,0 +1,37 @@
+.image-preview {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    padding: 6px;
+    justify-content: space-between;
+}
+.image-preview-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 0;
+}
+.image-preview-info p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.image-preview img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.image-preview button {
+    border-radius: 20px;
+    border-style: solid;
+    border-color: gray;
+    padding: 10px 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .image-preview {
+        width: 50vw;
+    }
+}
