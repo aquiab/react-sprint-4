@@ -1,0 +1,43 @@
+.errorPage__container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.errorPage__container .errorPage__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  padding: 35px 15px;
+  background-color: #0cb093;
+  color: #fff;
+}
+
+.errorPage__content .code {
+  position: relative;
+  font-size: 6rem;
+  font-weight: bold;
+  margin: 0;
+  border-bottom: 4px #fff solid;
+}
+
+.errorPage__content .code::before{
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: calc(50% - 6px);
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border: #0cb093 solid 4px;
+}
+
+.errorPage__content h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
