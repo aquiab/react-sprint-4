@@ -1,33 +1,96 @@
 {
   "products": [
     {
-      "nombre": "pepe argento",
-      "precio": 0,
-      "stock": 0,
-      "desc": "eeeee",
-      "tienda": "",
+      "nombre": "Samsung Z Flip",
+      "precio": "250000",
+      "stock": "99",
+      "desc": "Doble cámara y más detalles\nSus 2 cámaras traseras de 12 Mpx/12 Mpx te permitirán tomar imágenes con más detalles y lograr efectos únicos como el famoso modo retrato de poca profundidad de campo.\n\nAdemás, el dispositivo cuenta con cámara frontal de 10 Mpx para que puedas sacarte divertidas selfies o hacer videollamadas.\n\nDescubrí la pantalla plegable\nAl plegarse, adopta un tamaño pequeño y compacto que te resultará muy cómodo para transportar. Cuando quieras disfrutar de tus contenidos favoritos se transforma desplegando su pantalla de 6.7\".\n\nDesbloqueo veloz con tu huella dactilar\nCon el sensor de huella dactilar, el acceso es seguro y podrás desbloquearlo automáticamente con un toque.\n\nBatería para todo el día\nSu batería de 3300 mAh se adapta a tu ritmo de vida y te garantiza energía para toda una jornada con una sola carga.\n\nGran capacidad de almacenamiento\nCon su memoria interna de 128 GB podrás almacenar archivos y aplicaciones de gran tamaño sin necesidad de subirlos a la nube y aprovechar tus momentos sin conexión para darles el máximo uso.",
       "imgs": [
-        "https://www.lavoz.com.ar/resizer/t2QMkFv7WWXWcq_xMAx5j4yO_ws=/382x254/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/6Y6YDV4YFRDORFT3O4PUNLU5RE.jpg"
+        "https://tienda.claro.com.ar/wcsstore/Claro/Attachment/linea-z-galaxy-foldheadmain.jpg",
+        "https://www.clarin.com/img/2021/08/11/galaxy-z-fold-3-con___UPWei7kxV_340x340__1.jpg"
       ],
       "id": 1
     },
     {
-      "nombre": "asdasdasdasd",
-      "precio": 0,
-      "stock": 0,
-      "desc": "",
-      "tienda": "",
-      "imgs": [],
+      "nombre": "Silla De Oficina Pc Escritorio Ergonómica Alta Midtown Negra",
+      "precio": "16100",
+      "stock": "18",
+      "desc": "Silla ejecutiva con cabecero, respaldo tapizado en malla color negro, asiento en espuma de alta densidad, tapiz en malla.\n\nMedidas: Alto 105/115 x Largo 62 x Ancho 48 cm\nMedidas caja: 57.5 x 25.5 x 57 cm (1 unidad x caja)\nPeso: Bruto: 10.3 kg / Neto: 9.4 kg",
+      "imgs": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_859586-MLA49327252193_032022-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_666377-MLA49327252194_032022-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_719916-MLA49327252195_032022-F.webp"
+      ],
       "id": 2
     },
     {
-      "nombre": "Jabon",
-      "precio": 0,
-      "stock": 0,
-      "desc": "eeeeeeeeeeeeee",
-      "tienda": "",
-      "imgs": [],
+      "nombre": "Cafetera Nescafé Moulinex Dolce Gusto Genio S Plus automática negra para cápsulas monodosis 230V",
+      "precio": "31999",
+      "stock": "550",
+      "desc": "Con su larga trayectoria Nescafé es líder en el mercado de bebidas y máquinas de café. Esta marca se destaca por hacer de tu café una obra de arte, pero sobre todo exquisito. Su gran variedad en cuanto a máquinas y sabores la convierten en tu compañera ideal para cualquier ocasión, sea en la oficina, en tu hogar o simplemente compartir un momento delicioso.\n\nUna opción para cada gusto\nArrancar cada mañana de una forma diferente es posible. Con las cápsulas podés elegir entre una amplia gama de variedades de café y otras bebidas, como chocolate caliente.\n\nCafé para paladares exigentes\nEn pocos minutos y siguiendo simples pasos tu café va a estar listo con resultados profesionales. Programá tu cafetera y empezá a disfrutar de su aroma e intenso sabor.",
+      "imgs": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_668896-MLA45538604505_042021-F.webp"
+      ],
       "id": 3
+    },
+    {
+      "nombre": "Bota Hombre Cuero Borcego Botita Briganti Zapato - Hcbo00902",
+      "precio": "14079",
+      "stock": "69",
+      "desc": "Bota de Cuero de Hombre - Briganti\n\n\nTaco: 3 cm.\nPlataforma: 1 cm.\nMaterial Interno: Cuero\nMaterial Externo: Cuero\nBase: Goma\nCaña: 9 cm.",
+      "imgs": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_905821-MLA31114113460_062019-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_783871-MLA31114120868_062019-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_626153-MLA31114122815_062019-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_756738-MLA31114129508_062019-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_680074-MLA47411898152_092021-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_997256-MLA31114113976_062019-F.webp"
+      ],
+      "id": 4
+    },
+    {
+      "nombre": "Pelota Fútbol adidas Al Rihla Competition Qatar N°5 F11",
+      "precio": "18.999",
+      "stock": "150",
+      "desc": "",
+      "imgs": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_744914-MLA49984338877_052022-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_813654-MLA49984365766_052022-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_985015-MLA49984475120_052022-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_924122-MLA49984473125_052022-F.webp"
+      ],
+      "id": 5
+    },
+    {
+      "nombre": "Auriculares in-ear inalámbricos F9-5 negro",
+      "precio": "1799",
+      "stock": "1113",
+      "desc": "En la calle, en el colectivo o en la oficina, tené siempre a mano tus auriculares F9-5 y ¡escapate de la rutina por un rato! Vas a poder disfrutar de la música que más te gusta y de tus podcasts favoritos cuando quieras y donde quieras.\n\nEl formato perfecto para vos\nAl ser in-ear, mejoran la calidad del audio y son de tamaño pequeño para poder insertarse en tu oreja. Son ideales para acompañarte a la hora de hacer ejercicio mientras te sumergís en el mejor sonido envolvente.\n\nBluetooth de última generación\nCon la versión de bluetooth 5.0 tenés un montón de beneficios para aprovechar. En comparación a su antecesor BT 4.2, podrás obtener velocidades de transmisión de hasta 2.2 Mbps de datos y alcanzar una distancia máxima de 200 metros de conexión. Pero una de las novedades más sobresalientes es que con su modo dual tendrás la posibilidad de reproducir audio al mismo tiempo en dos dispositivos diferentes.",
+      "imgs": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_938092-MLA45480677826_042021-F.webp"
+      ],
+      "id": 6
+    },
+    {
+      "nombre": "Smart TV Samsung Series 7 UN43AU7000GCZB LED 4K 43\" 220V - 240V",
+      "precio": "79999",
+      "stock": "52",
+      "desc": "Samsung es reconocida a nivel mundial como una empresa líder en la industria tecnológica. Todos sus productos son diseñados con una calidad superior y pensados para contribuir a un futuro mejor. Por eso, va a hacer que disfrutes de una experiencia visual incomparable.\nCon el Smart TV UN43AU7000G vas a acceder a las aplicaciones en las que se encuentran tus contenidos favoritos. Además, podés navegar por Internet, interactuar en redes sociales y divertirte con videojuegos.\n\nViví en 4K\nLa cantidad de pixeles que ofrece es 4 veces mayor que la Full HD, ¿el resultado? Escenas mucho más realistas y con un nivel de detalle increíble. Ahora vas a conocer una aventura de inmersión que no va a dejar de sorprenderte.\n\nUn sonido que te envuelve\nVas a sentir que proviene desde todas las direcciones posibles, lo cual enriquece la percepción del mismo. Los diálogos de tus series de fin de semana o la música de tus cantantes preferidos van a cobrar otro significado.\n\nMás allá de ver televisión\nSu función Screen Share permite duplicar la pantalla de tu smartphone, tablet o PC para que aparezca en la TV. De esta forma vas a poder visualizar todo tipo de contenido: material audiovisual, documentos de trabajo, correos electrónicos y más.\n\nConexión invisible\nEste modelo está pensado para que puedas despejar tu campo visual. El sector donde coloques el televisor se verá mucho más prolijo porque los cables estarán ocultos, ordenados y organizados, ¡vas a notar la diferencia!",
+      "imgs": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_694106-MLA48008156014_102021-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_985601-MLA48007822990_102021-F.webp"
+      ],
+      "id": 7
+    },
+    {
+      "nombre": "Tv Sony Trinitron 21 Pulgadas Modelo Kv-21se40a",
+      "precio": "5000",
+      "stock": 1,
+      "desc": "",
+      "imgs": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_759164-MLA26018224836_092017-F.webp"
+      ],
+      "id": 8
     }
   ]
 }

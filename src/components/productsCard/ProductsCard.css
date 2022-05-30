@@ -38,6 +38,7 @@
     margin-right: 10px;
     border-radius: 13px;
     margin-top: 3px;
+    object-fit: cover;
 }
 
 .flecha{

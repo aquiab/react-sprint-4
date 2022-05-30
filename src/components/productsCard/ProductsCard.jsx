@@ -6,13 +6,14 @@ import { Link } from 'react-router-dom'
 
 const ProductsCard = (props) => {
 
-
-
     return (
     <Link to = {`${props.producto.id}`}>
         <article className='barra-products'>
             <div className='product'>
-                <div><img className='products-img' src={props.producto.imgs[0]} alt="imgProd" /></div>
+                <div>
+                    {props.producto.imgs.length > 0 && 
+                    <img className='products-img' src={props.producto.imgs[0]} alt="imgProd" />}
+                </div>
                     <div className='product-info-container'> 
                         <div className='product-info'>
                             <p>

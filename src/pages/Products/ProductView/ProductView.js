@@ -12,7 +12,7 @@ export default function ProductView() {
 	const navigate = useNavigate();
 	const [newImage, setNewImage] = useState("");
     const [initialForm, setInitialForm] = useState(null)
-	const [form, handleChange, setForm, resetForm] = useForm({
+	const [form, handleChange, setForm, ,] = useForm({
 		nombre: "",
 		precio: 0,
 		stock: 0,
@@ -39,7 +39,10 @@ export default function ProductView() {
 			? `${process.env.REACT_APP_API_PRODUCTS}${id}`
 			: process.env.REACT_APP_API_PRODUCTS;
 		method(url, form)
-			.then((res) => console.log(res))
+			.then((res) => {
+                console.log(res)
+                navigate("/products")
+            })
 			.catch((err) => console.error(err));
 	};
 
@@ -51,10 +54,12 @@ export default function ProductView() {
 
 	const addNewImage = (e) => {
 		e.preventDefault();
-		!form.imgs.includes(newImage) &&
+        setNewImage("")
+		newImage.trim() && !form.imgs.includes(newImage) && 
 			setForm({ ...form, imgs: [...form.imgs, newImage] });
 	};
-    const crumbs = [{ title: `Productos`, path: "/products" }, { title: `#${id}`, path: `/products/${id}` }];
+
+    const crumbs = [{ title: `Productos`, path: "/products" }, { title: `#${id || "Nuevo producto"}`, path: `/products/${id}` }];
 
     return(
         <div className="product-view">
