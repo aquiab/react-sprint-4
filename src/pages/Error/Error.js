@@ -10,7 +10,6 @@ export default function Error() {
                 <span className="code">404</span>
                 <h1>La página que estás buscando no existe.</h1>
             </div>
-            Página no encontrada
         </div>
     )
 }

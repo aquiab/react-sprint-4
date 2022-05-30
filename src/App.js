@@ -1,12 +1,15 @@
 import MainArea from "./components/MainArea/MainArea";
 import AppRouter from "./routes/AppRouter";
+import ProductsProvider from "./context/ProductsContext";
 
 function App() {
   return (
     <>
-    <MainArea >
-      <AppRouter />
-    </MainArea>
+      <ProductsProvider>
+        <MainArea>
+        <AppRouter />
+        </MainArea>
+      </ProductsProvider>
     </>
   );
 }
