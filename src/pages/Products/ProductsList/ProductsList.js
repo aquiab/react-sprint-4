@@ -6,6 +6,7 @@ import { productsContext } from "../../../context/ProductsContext";
 import axios from "axios";
 import Header from "../../../components/Header/Header";
 import Searchbar from "../../../components/SearchBar/Searchbar";
+import { Link } from "react-router-dom";
 
 export default function ProductsList() {
 	const crumbs = [{ title: `Productos`, path: "/products" }];
@@ -40,7 +41,7 @@ export default function ProductsList() {
 	useEffect(() => {
 		getProducts();
 		axios
-			.get("http://localhost:3001/products/")
+			.get(process.env.REACT_APP_API_PRODUCTS)
 			.then((res) => setFiltrados(res.data))
 			.catch((err) => console.log(err));
 	}, []);
@@ -53,7 +54,12 @@ export default function ProductsList() {
 		<>
 			<Header
 				breadcrumbs={crumbs}
-				addon={<Searchbar value={busqueda} onChange={handleChange} onExpand={handleSearchBarExpand}/>}
+				addon={
+				<> 	
+					<Searchbar value={busqueda} onChange={handleChange} onExpand={handleSearchBarExpand}/>
+					<Link className="button-hover" to="/products/new">Agregar producto</Link>
+				</>
+				}
 				addonExpanded={searchbarExpanded}
 			/>
 
