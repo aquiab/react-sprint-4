@@ -20,3 +20,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.fa {
+  font-size: 15px;
+
+}
+
+.btn-floating {
+  position: fixed;
+  bottom:1.9%;
+  right:1.5%;
+  background-color: black;
+  color: white;
+
+}
+.btn-floating:hover {
+  background-color: black;
+  color: white;
+}
+
+.textoTema{
+  display: inline;
+  margin-left: 10px;
+}
+:root {
+  --imagenBarraMain:white;
+  --fondoColorBarraMain:grey;
+  --colorFuenteBarraMain:white;
+  --colorFuenteBarraButton:white;
+  --colorFondoBarraButton:rgb(167, 167, 167);
+}
+
+.dark{
+  --imagenBarraMain:black;
+  --fondoColorBarraMain:grey;
+  --colorFuenteBarraMain:white;
+  --colorFuenteBarraButton:white;
+}

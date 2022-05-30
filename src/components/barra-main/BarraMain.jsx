@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import './BarraMain.css' 
 import { useEffect} from "react";
 import useGetProducts from "../../hooks/useGetProducts";
 import PropTypes from "prop-types"
+import {ThemeContext} from "../../context/ThemeProvider";
 
 
 const BarraMain = (props) => {
@@ -15,12 +16,12 @@ const BarraMain = (props) => {
     getProducts();
     
   },[])
-
+    const { darkMode } = useContext(ThemeContext);
   return (
     <>
-        <ul className='barra-main'>
-            <div className='barra-porducts'>
-                <li><img className='imagen' src={props.svgImg} alt="img" /></li>
+        <ul className={darkMode ? 'barra-main .dark' : 'barra-main'} >
+            <div className={darkMode ? 'barra-porducts .dark' :'barra-porducts'}>
+                <li><img className={darkMode ? 'imagen .dark' : 'imagen'} src={props.svgImg} alt="img" /></li>
                 <li> {products.length} {props.nombre[0]} </li>
             </div>
             <div className='barra-buttons'>

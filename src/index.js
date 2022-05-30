@@ -6,16 +6,20 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import SidebarProvider from "./context/sidebarContext";
 import UserProvider from "./context/userContext";
+import {ThemeProvider} from "./context/ThemeProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
+
 		<BrowserRouter>
+			<ThemeProvider>
 			<UserProvider>
 				<SidebarProvider>
 					<App />
 				</SidebarProvider>
 			</UserProvider>
+			</ThemeProvider>
 		</BrowserRouter>
 	</React.StrictMode>
 );
