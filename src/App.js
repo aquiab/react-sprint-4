@@ -1,9 +1,12 @@
 import AppRouter from "./routes/AppRouter";
+import ProductsProvider from "./context/ProductsContext";
 
 function App() {
   return (
     <>
-      <AppRouter />
+      <ProductsProvider>
+        <AppRouter />
+      </ProductsProvider>
     </>
   );
 }

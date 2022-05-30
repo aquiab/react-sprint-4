@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "nombre": "eeeeeee",
+      "nombre": "Gaseosa",
       "precio": 0,
       "stock": 0,
       "desc": "eeeeeeeeeeeeee",
@@ -9,6 +9,36 @@
       "imgs": [],
       "imagenes": "e",
       "id": 1
+    },
+    {
+      "nombre": "Jabon",
+      "precio": 0,
+      "stock": 0,
+      "desc": "eeeeeeeeeeeeee",
+      "tienda": "",
+      "imgs": [],
+      "imagenes": "e",
+      "id": 2
+    },
+    {
+      "nombre": "Agua con gas",
+      "precio": 0,
+      "stock": 0,
+      "desc": "eeeeeeeeeeeeee",
+      "tienda": "",
+      "imgs": [],
+      "imagenes": "e",
+      "id": 3
+    },
+    {
+      "nombre": "jabon de baño",
+      "precio": 0,
+      "stock": 0,
+      "desc": "eeeeeeeeeeeeee",
+      "tienda": "",
+      "imgs": [],
+      "imagenes": "e",
+      "id": 4
     }
   ]
 }

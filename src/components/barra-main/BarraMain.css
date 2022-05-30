@@ -1,6 +1,5 @@
 *{
     list-style: none;
-
 }
 
 .imagen{
@@ -38,7 +37,8 @@
     border-radius: 50px;
     background-color: rgb(167, 167, 167);
     border-style: none;
-    height: 20px;
+    height: 22px;
+    width: 97px;
     cursor: pointer;
 }
 

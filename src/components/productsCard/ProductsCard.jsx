@@ -4,8 +4,6 @@ import svgChevron from '../../assets/chevron-right.svg'
 
 const ProductsCard = (props) => {
 
-        console.log(props)
-
 
       return (
     <>
