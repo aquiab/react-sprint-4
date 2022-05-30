@@ -29,8 +29,8 @@
   border-radius: 8px;
 }
 
-.navlink__icon {
-  filter: invert(100%);
+.navlink img {
+  filter: var(--imagenBarraMain);
 }
 
 .navlink.active {

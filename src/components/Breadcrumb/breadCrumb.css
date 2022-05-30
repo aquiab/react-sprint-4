@@ -7,8 +7,12 @@
 }
 
 .breadCrumb .breadCrumbLink {
-  color: #000;
+  color: var(--colorFuente);
   text-decoration: none;
+}
+
+.breadCrumb img {
+  filter: var(--imagenBarraMain);
 }
 
 .breadCrumbLink h3 {

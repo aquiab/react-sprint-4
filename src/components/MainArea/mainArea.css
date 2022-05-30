@@ -1,48 +1,48 @@
 .mainArea-container {
-  display: flex;
+	display: flex;
 }
 
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: -300px;
-  height: 100vh;
-  width: 296px;
-  background-color: transparent;
-  transition: left .7s ease-in-out;
-  z-index: 105;
-  backdrop-filter: blur(5px);
+	position: fixed;
+	top: 0;
+	left: -300px;
+	height: 100vh;
+	width: 296px;
+	background-color: var(--backgroundSidebar);
+	transition: left 0.7s ease-in-out;
+	z-index: 105;
+	backdrop-filter: blur(5px);
 }
 
 .clickEventGuard {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 104;
-  background-color: transparent;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 104;
+	background-color: transparent;
 }
 
 .mainArea {
-  width: 100vw;
-  overflow: auto;
-  height: 100vh;
+	width: 100vw;
+	overflow: auto;
+	height: 100vh;
+	background-color: var(--backgroundSecundario);
 }
 
-
 @media screen and (min-width: 1024px) {
-  .sidebar {
-    background-color: #efefef;
-    position: inherit;
-    left: 0;
-  }
-  
-  .mainArea {
-    width: calc(100% - 296px);
-  }
+	.sidebar {
+	background-color: var(--backgroundPrincipal);
+  position: inherit;
+		left: 0;
+	}
 
-  .clickEventGuard {
-    display: none!important;
-  }
+	.mainArea {
+		width: calc(100% - 296px);
+	}
+
+	.clickEventGuard {
+		display: none !important;
+	}
 }

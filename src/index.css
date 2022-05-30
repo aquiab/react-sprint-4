@@ -43,17 +43,3 @@ code {
   display: inline;
   margin-left: 10px;
 }
-:root {
-  --imagenBarraMain:white;
-  --fondoColorBarraMain:grey;
-  --colorFuenteBarraMain:white;
-  --colorFuenteBarraButton:white;
-  --colorFondoBarraButton:rgb(167, 167, 167);
-}
-
-.dark{
-  --imagenBarraMain:black;
-  --fondoColorBarraMain:grey;
-  --colorFuenteBarraMain:white;
-  --colorFuenteBarraButton:white;
-}

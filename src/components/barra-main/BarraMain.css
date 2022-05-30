@@ -5,8 +5,7 @@
 
 
 .imagen{
-    filter:invert(100%);
-    color: var(--imagenBarraMain);
+    filter:var(--imagenBarraMain);
 }
 
 .barra-main{

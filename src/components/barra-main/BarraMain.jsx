@@ -21,7 +21,7 @@ const BarraMain = (props) => {
     <>
         <ul className={darkMode ? 'barra-main .dark' : 'barra-main'} >
             <div className={darkMode ? 'barra-porducts .dark' :'barra-porducts'}>
-                <li><img className={darkMode ? 'imagen .dark' : 'imagen'} src={props.svgImg} alt="img" /></li>
+                <li><img className='imagen' src={props.svgImg} alt="img" /></li>
                 <li> {products.length} {props.nombre[0]} </li>
             </div>
             <div className='barra-buttons'>
