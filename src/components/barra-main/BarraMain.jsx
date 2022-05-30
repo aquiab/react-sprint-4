@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import './BarraMain.css' 
 import { useEffect} from "react";
 import useGetProducts from "../../hooks/useGetProducts";
+import PropTypes from "prop-types"
 
 
 const BarraMain = (props) => {
@@ -24,11 +25,12 @@ const BarraMain = (props) => {
             </div>
             <div className='barra-buttons'>
                 <li><Link to='products'><button className='barra-button'>Ver Listado </button></Link></li>
-                <li><Link to=''><button className='barra-button'>Agregar {props.nombre[1]}  </button> </Link> </li>
+                <li><Link to='products/new'><button className='barra-button'>Agregar {props.nombre[1]}  </button> </Link> </li>
             </div>
         </ul>
     </>
   )
 }
+
 
 export default BarraMain
