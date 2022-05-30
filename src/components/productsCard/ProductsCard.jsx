@@ -9,7 +9,7 @@ const ProductsCard = (props) => {
     <>
     <ul className='barra-products'>
         <div className='product'>
-            <li><img src={props.producto.imagenes[0]} alt="imgProduct" /></li>
+            <li><img src={props.producto.imgs[0]} alt="imgProduct" /></li>
                 <li className='product-info-container'> 
                     <div className='product-info'>
                         <p>
