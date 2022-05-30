@@ -9,15 +9,15 @@ import { userContext } from "../../context/userContext";
 export default function Home() {
 	const { user } = useContext(userContext);
 
-	const tiendas = ['Tiendas', 'Tienda']
-    const productos = ['Productos', 'Producto']
+	const tiendas = ["Tiendas", "Tienda"];
+	const productos = ["Productos", "Producto"];
 	const crumbs = [{ title: `Hola ${user.name}!`, path: "/" }];
 	return (
 		<div className="home">
-			<Header breadcrums={crumbs} />
+			<Header breadcrumbs={crumbs} />
 			<div className="home__container">
 				<BarraMain svgImg={svgProduct} nombre={productos} />
-				<BarraMain svgImg={svgStore} nombre={tiendas}/>
+				<BarraMain svgImg={svgStore} nombre={tiendas} />
 			</div>
 		</div>
 	);

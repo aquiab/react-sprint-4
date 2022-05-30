@@ -4,16 +4,16 @@ import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import svgBars from "../../assets/menu.svg";
 import "./header.css";
 import { sidebarContext } from "../../context/sidebarContext";
-const Header = ({ addon, breadcrums }) => {
+const Header = ({ addon, breadcrumbs }) => {
 
   const { toggleSidebar } = useContext(sidebarContext);
 	return (
 		<header className="header">
 			<div className="container">
 				<button className="menuButton" onClick={toggleSidebar}>
-					<img src={svgBars} />
+					<img src={svgBars} alt=""/>
 				</button>
-				<Breadcrumb steps={breadcrums} />
+				<Breadcrumb steps={breadcrumbs} />
 			</div>
 			<div className="addon-container">{addon}</div>
 		</header>
@@ -22,7 +22,7 @@ const Header = ({ addon, breadcrums }) => {
 
 Header.propType = {
 	addon: PropTypes.element,
-	breadcrums: PropTypes.arrayOf(
+	breadcrumbs: PropTypes.arrayOf(
 		PropTypes.shape({ title: PropTypes.string, path: PropTypes.string })
 	).isRequired
 };

@@ -1,12 +1,14 @@
 {
   "products": [
     {
-      "nombre": "",
+      "nombre": "pepe argento",
       "precio": 0,
       "stock": 0,
       "desc": "eeeee",
       "tienda": "",
-      "imgs": [],
+      "imgs": [
+        "https://www.lavoz.com.ar/resizer/t2QMkFv7WWXWcq_xMAx5j4yO_ws=/382x254/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/6Y6YDV4YFRDORFT3O4PUNLU5RE.jpg"
+      ],
       "id": 1
     },
     {
@@ -26,24 +28,6 @@
       "tienda": "",
       "imgs": [],
       "id": 3
-    },
-    {
-      "nombre": "Agua con gas",
-      "precio": 0,
-      "stock": 0,
-      "desc": "eeeeeeeeeeeeee",
-      "tienda": "",
-      "imgs": [],
-      "id": 4
-    },
-    {
-      "nombre": "jabon de baño",
-      "precio": 0,
-      "stock": 0,
-      "desc": "eeeeeeeeeeeeee",
-      "tienda": "",
-      "imgs": [],
-      "id": 5
     }
   ]
 }
