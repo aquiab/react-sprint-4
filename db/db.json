@@ -1,14 +1,24 @@
 {
   "products": [
     {
-      "nombre": "eeeeeee",
+      "nombre": "producto",
+      "precio": "2222",
+      "stock": 3,
+      "desc": "222222eeeeee",
+      "tienda": "",
+      "imgs": [
+        "https://pxb.cdn.ciudadano.news/ciudadano/012022/1642682519440.jpg"
+      ],
+      "id": 1
+    },
+    {
+      "nombre": "asdasdasdasd",
       "precio": 0,
       "stock": 0,
-      "desc": "eeeeeeeeeeeeee",
+      "desc": "",
       "tienda": "",
       "imgs": [],
-      "imagenes": "e",
-      "id": 1
+      "id": 2
     }
   ]
 }
