@@ -12,7 +12,7 @@ export default function ProductImagePreview({img, setForm}) {
                 <img src={img} alt={img}/>
                 <p>{img}</p>
             </span>
-            <button onClick={quitarImagen}>Quitar</button>
+            <button onClick={quitarImagen} className="button-hover">Quitar</button>
         </div>
     )
 }

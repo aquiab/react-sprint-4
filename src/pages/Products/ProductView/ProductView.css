@@ -6,6 +6,12 @@
     flex-direction: column;
     gap: 5px;
 }
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    gap: 4px;
+}
 .form input, .form textarea, .form select {
     border-radius: 20px;
     border-style: solid;
@@ -14,17 +20,23 @@
 }
 .form textarea {
     resize: none;
+    border: 2px solid gray;
 }
 .form h2 {
     font-weight: 400;
+    margin: 16px 0 10px 0;
 }
 .form-buttons {
     display: flex;
     flex-direction: column;
+    margin: 10px;
 }
 .form-buttons input {
     padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -33,10 +45,10 @@ input[type=number]::-webkit-outer-spin-button {
     display: inline-flex;
     align-items: center;
     position: relative;
-    width: 100px;
+    width: 8rem;
 }
 .form .input-number input {
-    width: 80px;
+    width: 8rem;
     text-align: center;
     padding: 10px;
 }
@@ -63,21 +75,32 @@ input[type=number]::-webkit-outer-spin-button {
     gap: 10px;
 }
 .form-add-img input{
-    flex-grow: 3;
+    flex-grow: 2;
 }
 .form-add-img button{
     border-radius: 20px;
     border-style: solid;
     border-color: gray;
-    padding: 8px;
+}
+
+.button-hover {
+    cursor: pointer;
+    padding: 10px;
+    background-color: lightgray;
+}
+.button-hover:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+    transition: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
     .form input, .form select {
-        max-width: 40vw;
+        max-width: 30vw;
     }
     .form textarea {
-        max-width: 50vw;
+        max-width: 40vw;
         min-height: 160px;
     }
     .form-buttons {

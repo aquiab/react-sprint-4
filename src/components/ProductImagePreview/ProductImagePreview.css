@@ -23,11 +23,19 @@
     border-radius: 10px;
     object-fit: cover;
 }
-.image-preview button {
+
+.button-hover {
     border-radius: 20px;
     border-style: solid;
     border-color: gray;
     padding: 10px 16px;
+    cursor: pointer;
+}
+.button-hover:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+    transition: 0.5s;
 }
 
 @media screen and (min-width: 768px) {

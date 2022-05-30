@@ -1,36 +1,36 @@
-.product-card {
+.product-preview {
     display: flex;
     flex-direction: row;
     gap: 10px;
     margin-top: 20px;
 }
-.product-card img {
+.product-preview img {
     width: 50px;
     height: 50px;
     object-fit: cover;
     border-radius: 10px;
 }
-.product-card-name{
+.product-preview-name{
     font-size: 20px;
 }
-.product-card-bottom {
+.product-preview-bottom {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.product-card-bottom-points {
+.product-preview-bottom-points {
     display: flex;
     gap: 20px;
 }
-.product-card-bottom-item {
+.product-preview-bottom-item {
     display: flex;
     gap: 10px;
 }
-.product-card-primary-text{
+.product-preview-primary-text{
     font-size: 20px;
     font-weight: bold;
 }
-.product-card-secondary-text{
+.product-preview-secondary-text{
     display: flex;
     flex-direction: column;
     font-size: 10px;
