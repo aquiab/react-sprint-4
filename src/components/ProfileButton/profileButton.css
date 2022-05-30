@@ -1,0 +1,15 @@
+.profileButton__container {
+  width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	cursor: pointer;
+	background-color: #494f51;
+	color: #fff;
+  border-radius: 50px;
+  gap: 15px;
+}
+
+.profileButton__icon {
+  display: inherit;
+}

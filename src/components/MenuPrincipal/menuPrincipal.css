@@ -1,0 +1,43 @@
+.menuPrincipal__container {
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menuPrincipal__container a {
+  text-decoration: none;
+}
+.list {
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.list li {
+  margin-top: 10px;
+}
+
+.navlink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  gap: 15px;
+  border-radius: 8px;
+}
+
+.navlink__icon {
+  filter: invert(100%);
+}
+
+.navlink.active {
+  background-color: #494f51;
+  color: #fff;
+}
+
+.navlink.active img{
+  filter: invert(1000%);
+}

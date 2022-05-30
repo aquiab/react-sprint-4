@@ -1,7 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
 import { sidebarContext } from "../../context/sidebarContext";
 import "./mainArea.css";
+import MenuPrincipal from "../MenuPrincipal/MenuPrincipal";
 
 const MainArea = ({ children }) => {
 	const { isOpen, closeSidebar } = useContext(sidebarContext);
@@ -9,17 +10,18 @@ const MainArea = ({ children }) => {
 		left: isOpen ? "0" : "-100%",
 	};
 
-  const sidebarRef = useClickOutside(closeSidebar)
-
+	const sidebarRef = useClickOutside(closeSidebar);
 
 	return (
 		<div className="mainArea-container">
 			<aside className="sidebar" style={sidebarStyle} ref={sidebarRef}>
-				Sidebar
+				<MenuPrincipal />
 			</aside>
-			<main className="mainArea">
-				{children}
-			</main>
+			<main className="mainArea">{children}</main>
+			<div
+				className="clickEventGuard"
+				style={{ display: isOpen ? "block" : "none" }}
+			/>
 		</div>
 	);
 };
