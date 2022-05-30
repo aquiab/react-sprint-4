@@ -1,5 +1,8 @@
 *{
     list-style: none;
+    text-decoration: none;
+    color:inherit;
+
 }
 
 .barra-products{
@@ -8,14 +11,16 @@
     border-radius:15px;
     background-color: grey;
     height: 60px;
-    width : calc(100vw - 296px);
+    width : 101%;
     position: relative;
-    right: -207px;
+    right: 36px;
     margin-bottom: 10px;
 }
+
 .product{
     display: flex;
     align-items: center;
+    margin-left: 43px;
 }
 
 
@@ -24,6 +29,15 @@
     height: 30px;
     align-items: center;
     justify-content: center;
+}
+
+.products-img{
+    height: 48px;
+    width: 48px;
+    margin-left: -35px;
+    margin-right: 10px;
+    border-radius: 13px;
+    margin-top: 3px;
 }
 
 .flecha{
@@ -39,9 +53,5 @@
     margin-top: -22px;
 }
 
-@media (min-width:1024px) {
-    .barra-products{
-        width: 95vw;
-        right: 30px;
-    }
-}
+
+
