@@ -4,16 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import SidebarProvider from "./components/context/sidebarContext";
+import SidebarProvider from "./context/sidebarContext";
+import UserProvider from "./context/userContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
-		<SidebarProvider>
-			<BrowserRouter>
-				<App />
-			</BrowserRouter>
-		</SidebarProvider>
+		<BrowserRouter>
+			<UserProvider>
+				<SidebarProvider>
+					<App />
+				</SidebarProvider>
+			</UserProvider>
+		</BrowserRouter>
 	</React.StrictMode>
 );
 
