@@ -2,8 +2,10 @@
     list-style: none;
 }
 
+
+
 .imagen{
-    color: white;
+    color: var(--imagenBarraMain);
 }
 
 .barra-main{
@@ -11,9 +13,9 @@
     justify-content: space-between;
     align-items: center;
     border-radius:15px;
-    background-color: grey;
+    background-color: var(--fondoColorBarraMain);
     height: 40px;
-    color: white;
+    color: var(--colorFuenteBarraMain);
     width : 100%;
 }
 
@@ -31,9 +33,9 @@
 
 .barra-button{
     font-size: 10px;
-    color: white;
+    color: var(--colorFuenteBarraButton);
     border-radius: 50px;
-    background-color: rgb(167, 167, 167);
+    background-color: var(--colorFondoBarraButton);
     border-style: none;
     height: 22px;
     width: 97px;
