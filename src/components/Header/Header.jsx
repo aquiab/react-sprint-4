@@ -4,18 +4,18 @@ import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import svgBars from "../../assets/menu.svg";
 import "./header.css";
 import { sidebarContext } from "../../context/sidebarContext";
-const Header = ({ addon, breadcrumbs }) => {
+const Header = ({ addon, addonExpanded, breadcrumbs }) => {
 
   const { toggleSidebar } = useContext(sidebarContext);
 	return (
-		<header className="header">
-			<div className="container">
+		<header className="header" style={{justifyContent: addonExpanded ? "stretch" : "space-between"}} >
+			<div className="container" style={{display: addonExpanded ? "none" : "flex"}}>
 				<button className="menuButton" onClick={toggleSidebar}>
 					<img src={svgBars} alt=""/>
 				</button>
 				<Breadcrumb steps={breadcrumbs} />
 			</div>
-			<div className="addon-container">{addon}</div>
+			<div className={`addon-container ${addonExpanded && "expanded"}`}>{addon}</div>
 		</header>
 	);
 };

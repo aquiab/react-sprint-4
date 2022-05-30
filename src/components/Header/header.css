@@ -17,6 +17,10 @@
   align-items: center;
 }
 
+.addon-container.expanded {
+  width: 100%;
+}
+
 .menuButton {
   border: none;
   padding: 8px;
