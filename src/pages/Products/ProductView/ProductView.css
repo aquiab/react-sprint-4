@@ -22,6 +22,9 @@
     resize: none;
     border: 2px solid gray;
 }
+.form textarea::-webkit-scrollbar {
+    display: none;
+}
 .form h2 {
     font-weight: 400;
     margin: 16px 0 10px 0;

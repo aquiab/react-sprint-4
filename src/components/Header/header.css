@@ -16,7 +16,17 @@
   display: flex;
   align-items: center;
 }
+.button-hover {
+  margin-left: 10px;
+  font-size: 12px;
+  width: auto;
+  text-align: center;
+}
 
+.addon-container {
+  display: flex;
+  align-items: center;
+}
 .addon-container.expanded {
   width: 100%;
 }
@@ -31,5 +41,8 @@
 @media screen and (min-width: 1024px) {
   .menuButton {
     display: none;
+  }
+  .button-hover {
+    width: 200px;
   }
 }
