@@ -108,7 +108,7 @@ export default function ProductView() {
 								className="input-number-left"
 								onClick={(e) => {
 									e.preventDefault();
-									form.stock > 0 && setForm({ ...form, stock: form.stock - 1 });
+									form.stock > 0 && setForm({ ...form, stock: parseInt(form.stock) - 1 });
 								}}
 								aria-label="Restar 1 producto"
 							>
@@ -125,7 +125,7 @@ export default function ProductView() {
 								className="input-number-right"
 								onClick={(e) => {
 									e.preventDefault();
-									setForm({ ...form, stock: form.stock + 1 });
+									setForm({ ...form, stock: parseInt(form.stock) + 1 });
 								}}
 								aria-label="Sumar 1 producto"
 							>
