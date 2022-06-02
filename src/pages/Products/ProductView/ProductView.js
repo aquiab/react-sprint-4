@@ -1,11 +1,13 @@
 import "./ProductView.css";
 import { useForm } from "../../../hooks/useForm";
-import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ProductPreview from "../../../components/ProductPreview/ProductPreview";
 import ProductImagePreview from "../../../components/ProductImagePreview/ProductImagePreview";
 import Header from "../../../components/Header/Header";
+import getProductById from "../../../utils/product/getProductById";
+import handleProductSubmit from "../../../utils/product/handleProductSubmit";
+import handleProductDelete from "../../../utils/product/handleProductDelete";
 
 export default function ProductView() {
 	const { id } = useParams();
@@ -21,36 +23,15 @@ export default function ProductView() {
 	});
 
 	useEffect(() => {
-		id &&
-			axios
-				.get(`${process.env.REACT_APP_API_PRODUCTS}${id}`)
-				.then((res) => {
-					setForm(res.data);
-					setInitialForm(res.data);
-				})
-				.catch(() => navigate("/error"));
+		id && getProductById(id)
+			.then((res) => {
+				setForm(res.data);
+				setInitialForm(res.data);
+			})
+			.catch(() => navigate("/error"));
 	}, [id, setForm, navigate]);
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		if (!form.nombre) return;
-		const method = id ? axios.put : axios.post;
-		const url = id
-			? `${process.env.REACT_APP_API_PRODUCTS}${id}`
-			: process.env.REACT_APP_API_PRODUCTS;
-		method(url, form)
-			.then((res) => {
-				console.log(res);
-				navigate("/products");
-			})
-			.catch((err) => console.error(err));
-	};
-
-	const handleDelete = (e) => {
-		e.preventDefault();
-		axios.delete(`${process.env.REACT_APP_API_PRODUCTS}${id}`);
-		navigate("/products");
-	};
+	
 
 	const addNewImage = (e) => {
 		e.preventDefault();
@@ -70,7 +51,7 @@ export default function ProductView() {
 			<Header
 				breadcrumbs={crumbs}
 				addon={
-					<button className="button-hover" onClick={handleDelete}>
+					<button className="button-hover" onClick={e => handleProductDelete(e, id)}>
 						Eliminar
 					</button>
 				}
@@ -177,7 +158,7 @@ export default function ProductView() {
 						<input
 							type="submit"
 							value="Guardar"
-							onClick={handleSubmit}
+							onClick={e => handleProductSubmit(e, form, id)}
 							className="button-hover"
 						></input>
 					</span>
