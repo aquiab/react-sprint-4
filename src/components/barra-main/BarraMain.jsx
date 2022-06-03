@@ -19,13 +19,13 @@ const BarraMain = (props) => {
     const { darkMode } = useContext(ThemeContext);
   return (
     <>
-        <ul className={darkMode ? 'barra-main .dark' : 'barra-main'} >
-            <div className={darkMode ? 'barra-porducts .dark' :'barra-porducts'}>
+        <ul className=/* {darkMode ? 'barra-main .dark' : */ 'barra-main' >
+            <div className=/* {darkMode ? 'barra-porducts .dark' : */'barra-porducts'>
                 <li><img className='imagen' src={props.svgImg} alt="img" /></li>
                 <li> {products.length} {props.nombre[0]} </li>
             </div>
             <div className='barra-buttons'>
-                <li><Link to='products'><button className='barra-button'>Ver Listado </button></Link></li>
+                <li><Link to='products'><button className='barra-button'>Ver Listado</button></Link></li>
                 <li><Link to='products/new'><button className='barra-button'>Agregar {props.nombre[1]}  </button> </Link> </li>
             </div>
         </ul>
