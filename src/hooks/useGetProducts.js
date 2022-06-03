@@ -10,9 +10,7 @@ const useGetProducts = () => {
         axios.get('http://localhost:3001/products/')
             .then(res=>setProducts(res.data))
             .catch(err=>console.log(err))
-
     }
-
   return (
     {products, getProducts}
   )
