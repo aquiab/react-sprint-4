@@ -31,8 +31,6 @@ export default function ProductView() {
 			.catch(() => navigate("/error"));
 	}, [id, setForm, navigate]);
 
-	
-
 	const addNewImage = (e) => {
 		e.preventDefault();
 		setNewImage("");
@@ -51,7 +49,11 @@ export default function ProductView() {
 			<Header
 				breadcrumbs={crumbs}
 				addon={
-					<button className="button-hover" onClick={e => handleProductDelete(e, id)}>
+					<button className="button-hover" 
+					onClick={e => {
+						handleProductDelete(e, id)
+						navigate("/products")
+					}}>
 						Eliminar
 					</button>
 				}
@@ -158,7 +160,10 @@ export default function ProductView() {
 						<input
 							type="submit"
 							value="Guardar"
-							onClick={e => handleProductSubmit(e, form, id)}
+							onClick={e => {
+								handleProductSubmit(e, form, id)
+								navigate("/products")
+							}}
 							className="button-hover"
 						></input>
 					</span>

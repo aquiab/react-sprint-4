@@ -8,8 +8,6 @@ export default function handleProductSubmit(e, form, id) {
 		? `${process.env.REACT_APP_API_PRODUCTS}${id}`
 		: process.env.REACT_APP_API_PRODUCTS;
 	return method(url, form)
-		.then((res) => console.log(res)
-			//navigate("/products");
-		)
+		.then((res) => console.log(res))
 		.catch((err) => console.error(err));
 }
