@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { act } from "react-dom/test-utils";
 import { MemoryRouter } from "react-router-dom";
-import { sidebarContext } from "../../context/sidebarContext";
+import SidebarProvider, { sidebarContext } from "../../context/sidebarContext";
 import UserProvider from "../../context/userContext";
 import Header from "../Header/Header";
 import MainArea from "./MainArea";
@@ -11,20 +11,11 @@ describe("Main Area", () => {
 	beforeEach(() => {
 		render(
 			<MemoryRouter>
-				<sidebarContext.Provider
-					value={{
-						isOpen: false,
-            toggleSidebar: jest.fn(),
-            openSidebar: jest.fn(),
-            closeSidebar: jest.fn(),
-					}}
-				>
+				<SidebarProvider>
 					<UserProvider>
-						<MainArea>
-							<Header />
-						</MainArea>
+						<MainArea />
 					</UserProvider>
-				</sidebarContext.Provider>
+				</SidebarProvider>
 			</MemoryRouter>
 		);
 	});
@@ -34,6 +25,4 @@ describe("Main Area", () => {
 		expect(main).toBeInTheDocument();
 		expect(aside).toBeInTheDocument();
 	});
-
-	
 });
