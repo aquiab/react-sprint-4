@@ -8,21 +8,54 @@ import Header from "../Header/Header";
 import MainArea from "./MainArea";
 
 describe("Main Area", () => {
-	beforeEach(() => {
+
+	test("Main area renderiza con sidebar cerrado", () => {
 		render(
 			<MemoryRouter>
-				<SidebarProvider>
+				<sidebarContext.Provider value={
+					{
+						isOpen: false,
+						closeSidebar: jest.fn()
+					}
+				}>
 					<UserProvider>
 						<MainArea />
 					</UserProvider>
-				</SidebarProvider>
+				</sidebarContext.Provider>
 			</MemoryRouter>
 		);
-	});
-	test("Main area renderiza", () => {
+
 		let main = screen.getByRole("main");
 		let aside = screen.getByRole("complementary");
+		let guard = screen.getByText("", { selector: ".clickEventGuard" });
+
 		expect(main).toBeInTheDocument();
 		expect(aside).toBeInTheDocument();
+		expect(guard).toHaveStyle("display: none");
+	});
+	
+	test("Main area renderiza con sidebar abierto", () => {
+		render(
+			<MemoryRouter>
+				<sidebarContext.Provider value={
+					{
+						isOpen: true,
+						closeSidebar: jest.fn()
+					}
+				}>
+					<UserProvider>
+						<MainArea />
+					</UserProvider>
+				</sidebarContext.Provider>
+			</MemoryRouter>
+		);
+
+		let main = screen.getByRole("main");
+		let aside = screen.getByRole("complementary");
+		let guard = screen.getByText("", { selector: ".clickEventGuard" });
+
+		expect(main).toBeInTheDocument();
+		expect(aside).toBeInTheDocument();
+		expect(guard).toHaveStyle("display: block");
 	});
 });
