@@ -18,7 +18,7 @@ const BarraMain = (props) => {
         <ul className='barra-main' >
             <div className='barra-porducts'>
                 <li><img className='imagen' src={props.svgImg} alt="img" /></li>
-                <li> {products.length} {props.nombre[0]} </li>
+                <li> {products.length} {props.nombre.barraTitulo} </li>
             </div>
             <div className='barra-buttons'>
                 <li><Link to={props.nombre.pathToListado}><button className='barra-button'>Ver Listado</button></Link></li>

@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { sidebarContext } from "../../../context/sidebarContext";
 import ProductView from "./ProductView";
 import { MemoryRouter, useParams } from "react-router-dom";
@@ -105,9 +105,23 @@ describe("Product View en modo editar producto (recibió id por params)", () => 
         expect(screen.getByText("#1")).toBeInTheDocument()
         expect(screen.getByText("urltest123")).toBeInTheDocument()
         expect(screen.getByText("urltest456")).toBeInTheDocument()
-        screen.debug()
     })
-    it("Si se recibe un producto con un id que no existe, se navega a la página de error", () => {
-        
+    it("Si se toca el botón de quitar imagen esta desaparece", async () => {
+        await wait()
+        const botones = screen.getAllByText(/quitar/i)
+        userEvent.click(botones[0])
+        expect(screen.queryByText("urltest123")).toBeNull()
+        expect(screen.getByText("urltest456")).toBeInTheDocument()
+        userEvent.click(botones[1])
+        expect(screen.queryByText("urltest456")).toBeNull()
+    })
+    it("Si se hacen cambios en el producto y se toca el botón de cancelar se resetean los inputs", async () => {
+        await wait()
+        const nombre = screen.getByLabelText(/nombre/i)
+        userEvent.click(nombre)
+        userEvent.keyboard(" bueno")
+        expect(nombre).toHaveValue("celular bueno")
+        userEvent.click(screen.getByText(/cancelar/i))
+        expect(nombre).toHaveValue("celular")
     })
 })

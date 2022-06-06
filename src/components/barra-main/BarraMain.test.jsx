@@ -17,8 +17,7 @@ describe("BarraMain", () => {
 		, {wrapper: MemoryRouter});
     })
     
-	test("los elementos se renderizan correctamente", () => {
-        screen.debug();   
+	test("los elementos se renderizan correctamente", () => { 
         const barra = screen.getAllByRole('listitem')
 		expect(screen.getByText(/ver listado/i)).toBeInTheDocument();
         expect(barra).toHaveLength(4);
