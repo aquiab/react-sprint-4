@@ -19,5 +19,16 @@ describe("Header", () => {
 		expect(screen.getByText(/step1/i)).toBeInTheDocument();
 	});
 
-	
+	test("renderiza correctamente con addon", () => {
+		const addon = <div>addon</div>;
+		render(
+			<sidebarContext.Provider value={{ toggleSidebar: jest.fn() }}>
+				<Header breadcrumbs={breadcrumbs} addon={addon} />
+			</sidebarContext.Provider>,
+			{ wrapper: MemoryRouter }
+		);
+    
+		expect(screen.getByText(/step1/i)).toBeInTheDocument();
+		expect(screen.getByText(/addon/i)).toBeInTheDocument();
+	});
 });
