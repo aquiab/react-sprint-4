@@ -4,6 +4,7 @@ import ProductView from "./ProductView";
 import { MemoryRouter, useParams } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import getProductById from "../../../utils/product/getProductById"
+import { wait } from "@testing-library/user-event/dist/utils";
 
 jest.mock("../../../context/sidebarContext")
 jest.mock("../../../utils/product/getProductById")
@@ -29,6 +30,7 @@ describe("ProductView en modo nuevo producto (no recibió id)", () => {
 		expect(screen.getByText(/nuevo producto/i)).toBeInTheDocument();
         expect(screen.getByLabelText(/nombre/i)).toHaveValue("")
         expect(screen.getByLabelText(/valor/i)).toHaveValue(0)
+        expect(screen.getByLabelText(/stock/i)).toHaveValue(0)
         expect(screen.getByLabelText(/descripción/i)).toHaveValue("")
         expect(screen.getByLabelText(/nueva imagen/i)).toHaveValue("")
 	});
@@ -79,7 +81,11 @@ describe("Product View en modo editar producto (recibió id por params)", () => 
             resolve({
                 data: {
                     nombre: "celular",
-                    id: 1
+                    precio: "2000",
+                    stock: "100",
+                    desc: "un buen celular",
+                    id: 1,
+                    imgs: ["urltest123", "urltest456"]
                 }
             })
         }))
@@ -90,7 +96,18 @@ describe("Product View en modo editar producto (recibió id por params)", () => 
 		, {wrapper: MemoryRouter});
     })
     it("Si se recibe un producto, se renderizan los inputs con los datos del producto", async () => {
-        await waitFor(() => expect(screen.findByLabelText(/nombre/i)).toHaveValue("celular")) 
+        await wait()
+        expect(screen.getByLabelText(/nombre/i)).toHaveValue("celular")
+        expect(screen.getByLabelText(/valor/i)).toHaveValue(2000)
+        expect(screen.getByLabelText(/stock/i)).toHaveValue(100)
+        expect(screen.getByLabelText(/descripción/i)).toHaveValue("un buen celular")
+        expect(screen.getByLabelText(/nueva imagen/i)).toHaveValue("")
+        expect(screen.getByText("#1")).toBeInTheDocument()
+        expect(screen.getByText("urltest123")).toBeInTheDocument()
+        expect(screen.getByText("urltest456")).toBeInTheDocument()
         screen.debug()
+    })
+    it("Si se recibe un producto con un id que no existe, se navega a la página de error", () => {
+        
     })
 })
