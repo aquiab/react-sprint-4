@@ -3,14 +3,10 @@ import { Link } from 'react-router-dom'
 import './BarraMain.css' 
 import { useEffect} from "react";
 import useGetProducts from "../../hooks/useGetProducts";
-import PropTypes from "prop-types"
-import {ThemeContext} from "../../context/ThemeProvider";
-
 
 const BarraMain = (props) => {
 
   const {products, getProducts} =useGetProducts();
-
   useEffect(()=>{
 
     getProducts();
@@ -25,8 +21,8 @@ const BarraMain = (props) => {
                 <li> {products.length} {props.nombre[0]} </li>
             </div>
             <div className='barra-buttons'>
-                <li><Link to='products'><button className='barra-button'>Ver Listado</button></Link></li>
-                <li><Link to='products/new'><button className='barra-button'>Agregar {props.nombre[1]}  </button> </Link> </li>
+                <li><Link to={props.nombre.pathToListado}><button className='barra-button'>Ver Listado</button></Link></li>
+                <li><Link to={props.nombre.pathToAgregar}><button className='barra-button'>Agregar {props.nombre.botonTitulo}</button> </Link> </li>
             </div>
         </ul>
     </>
