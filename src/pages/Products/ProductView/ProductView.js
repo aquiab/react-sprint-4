@@ -130,7 +130,7 @@ export default function ProductView() {
 
 					<h2>Galería de Imágenes</h2>
 					<span className="form-item">
-						<label htmlFor="imagenes">Nueva Imagen</label>
+						<label htmlFor="new_img">Nueva Imagen</label>
 						<span className="form-add-img">
 							<input
 								id="new_img"
