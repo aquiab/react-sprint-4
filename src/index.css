@@ -30,9 +30,10 @@ code {
   position: fixed;
   bottom:1.9%;
   right:1.5%;
-  background-color: black;
+  background-color: #494F51;
   color: white;
-
+/*   padding:15px 5px;
+ */  border-radius: 5px;
 }
 .btn-floating:hover {
   background-color: black;
