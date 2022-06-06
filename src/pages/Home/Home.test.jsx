@@ -52,6 +52,8 @@ describe ("Home",()=>{
         const butEl=screen.getAllByText(/ver listado/i);
         const butElAgregarProd=screen.getByRole("link",{name:/agregar producto/i});
         const butElAgregarTienda=screen.getByRole("link",{name:/agregar tienda/i})
+        const numEl= screen.getAllByText("2");
+        expect(numEl.length).toBe(2);
         expect(butElAgregarProd).toBeInTheDocument();
         expect(butElAgregarTienda).toBeInTheDocument();
         expect(butEl).toHaveLength(2);
