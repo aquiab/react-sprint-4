@@ -31,4 +31,23 @@ describe("Header", () => {
 		expect(screen.getByText(/step1/i)).toBeInTheDocument();
 		expect(screen.getByText(/addon/i)).toBeInTheDocument();
 	});
+
+	test("renderiza correctamente con addonExpanded", () => {
+		const addon = <div>addon</div>;
+		render(
+			<sidebarContext.Provider value={{ toggleSidebar: jest.fn() }}>
+				<Header breadcrumbs={breadcrumbs} addon={addon} addonExpanded />
+			</sidebarContext.Provider>,
+			{ wrapper: MemoryRouter }
+		);
+
+    let addonRend = screen.getByText(/addon/i)
+    let header = addonRend.closest("header");
+		expect(screen.getByText(/step1/i)).toBeInTheDocument();
+		expect(addonRend).toBeInTheDocument();
+    expect(header).toHaveStyle("justify-content: stretch");
+
+		let div = screen.getByText("addon").closest(".addon-container");
+    expect(div).toHaveClass("expanded");
+	});
 });
