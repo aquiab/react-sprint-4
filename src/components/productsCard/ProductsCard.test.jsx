@@ -15,7 +15,6 @@ describe('Products Card',()=>{
         nombre : "nombre"
     }
     test('los elementos se renderizan correctamente',()=>{
-        screen.debug();
         const imgEl=screen.getAllByRole("img");
         const stringEl=screen.getByText(/nombre/i);
         const idEl=screen.getByText(/#1/i);
