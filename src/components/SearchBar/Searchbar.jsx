@@ -6,32 +6,33 @@ const Searchbar = ({ value, onChange, onExpand }) => {
 
 	const handleClick = () => {
 		setIsExpanded((x) => !x);
-    onExpand();
+		onExpand();
 	};
 	return (
-			<div className="searchbar-container"><button
+		<div className="searchbar-container">
+			<button
 				className="closeButton"
 				style={{ display: isExpanded ? "flex" : "none" }}
-        onClick={handleClick}
+				onClick={handleClick}
 			>
 				X
 			</button>
-		<div className={`searchBar ${isExpanded && "expanded"}`}>
-			<form>
-				<input
-					type="text"
-					id="busqueda"
-					name="busqueda"
-					value={value}
-					onChange={onChange}
-					placeholder="Buscar productos"
-				/>
-			</form>
-			<button className="lupa" onClick={handleClick}>
-				<img src={svgLupa} alt="" />
-			</button>
+			<div className={`searchBar ${isExpanded && "expanded"}`}>
+				<form>
+					<input
+						type="search"
+						id="busqueda"
+						name="busqueda"
+						value={value}
+						onChange={onChange}
+						placeholder="Buscar productos"
+					/>
+				</form>
+				<button className="lupa" onClick={handleClick}>
+					<img src={svgLupa} alt="" />
+				</button>
+			</div>
 		</div>
-    </div>
 	);
 };
 
